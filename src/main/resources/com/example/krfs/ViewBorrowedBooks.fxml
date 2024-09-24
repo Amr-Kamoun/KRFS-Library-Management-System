@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:BG.jpg'); -fx-background-size: 100% 100%;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.krfs.ViewBorrowedBooks">
+   <children>
+      <TableView fx:id="Table2" prefHeight="400.0" prefWidth="302.0" style="-fx-background-image: url('file:BG.jpg'); -fx-background-size: 100% 100%;">
+        <columns>
+          <TableColumn fx:id="Book" prefWidth="75.0" text="Book" />
+          <TableColumn fx:id="Author" prefWidth="75.0" text="Author" />
+            <TableColumn fx:id="Type" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="Price" prefWidth="75.0" text="Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="logOutButton" layoutX="512.0" layoutY="369.0" mnemonicParsing="false" onMouseClicked="#logOutButtonClicked" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #87CEFA;" text="Home" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="ReturnBookButton" layoutX="348.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#ReturnBookButtonClicked" prefHeight="46.0" prefWidth="208.0" style="-fx-background-color: #87CEFA;" text="Return  Book" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    cursor: default;
+}
+
+body {
+    background-color: #f1f1f1;
+    font-family: Verdana;
+    font-size: 14px;
+    /* background-image: url("/images/Milk.jpeg"); */
+}
+
+.navbar {
+    display: block;
+    padding: 3em;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.07);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-image: url("/images/Milk.jpeg");
+
+}
+
+.navbar h2 {
+    cursor: pointer;
+    color: #bd7400;
+    font-weight: 700;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.navbar a {
+    color: #141414;
+    font-weight: 700;
+    font-size: 1.3em;
+    transition: color 0.2s;
+    text-transform: uppercase;
+}
+
+.navbar-middle a:hover:not(.button) {
+    color: #bd7400;
+    border-bottom: 2px solid #bd7400;
+}
+
+.navbar-middle a {
+    text-decoration: none;
+    color: #bd7400;
+    border-bottom: 2px solid #bd7400;
+}
+
+.navbar .navbar-middle a:after {
+    text-decoration: none;
+    color: #bd7400;
+    border-bottom: 2px solid #bd7400;
+}
+
+
+.navbar .navbar-middle {
+    display: flex;
+}
+
+.navbar .navbar-middle li {
+    padding: 0 1em;
+}
+
+.navbar .navbar-middle .button {
+    color: #bd7400;
+    background-color: #bd7400;
+    padding: 0.7em 1em;
+    border-radius: 0.3em;
+}
+
+footer {
+    position: absolute;
+    bottom: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2.5em 10em;
+    color: #141414;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 -2px 2px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.07);
+}
+
+footer .footer-left {
+    margin-right: auto;
+}
+
+footer .footer-left a {
+    color: #141414;
+    font-size: 1.3em;
+}
+
+footer .footer-right {
+    display: flex;
+    align-items: center;
+}
+
+footer .footer-right h3 {
+    font-size: 1.3em;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 13em;
+}
+
+.title .emoji {
+    position: absolute;
+    font-size: 4em;
+    filter: drop-shadow(0 3px 1px #141414);
+    cursor: default;
+}
+
+.title .emoji:nth-child(2) {
+    transform: rotate(-10deg);
+    top: 2.7em;
+    left: 11.3em;
+}
+
+.title .emoji:nth-child(3) {
+    transform: rotate(-180deg);
+    top: 3.4em;
+    left: 17.8em;
+}
+
+.title h1 {
+    text-transform: uppercase;
+    color: #bd7400;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    transform: scale(.9);
+}
+
+@media screen and (max-width: 800px) {
+
+    #leftcolum,
+    #rightcolum {
+        width: 100%;
+        padding: 0;
+    }
+
+    #menu {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+
+    #floatingMenu {
+        display: none;
+    }
+}
+
+#floatingMenu img {
+    width: 30px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px
+}
+
+img {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+img:hover {
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.hide {
+    display: none;
+    /* margin-top: 250px; */
+}
+
+.card :hover+.hide {
+    display: block;
+    color: white;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    max-width: 61em;
+    height: 40em;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2.5em 2.5em 1.5em 1.5em;
+    box-shadow: 0px 2px 5px black;
+    transition: box-shadow 0.25s, transform 0.25s;
+    transform: scale(.8)
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 1px 0 30px #bd7400;
+    transform: translateY(-0.25em);
+}
+
+.card h1 {
+    position: absolute;
+    background-color: #bd7400;
+    color: #f1f1f1;
+    font-weight: 500;
+    border-radius: 0 0 1em 1em;
+}
+
+
+.card:nth-child(1) {
+    width: 20em;
+    background-image: url("kamoun.jpeg");
+    padding: 0.4em 4.54em;
+    
+}
+.card ::first-letter{
+    color: orange;
+  font-weight: bold;
+    font-size: 50px;
+    
+  #margin-right: .75em;
+}
+
+.card:nth-child(2) {
+    width: 20em;
+    background-image: url("rani.jpeg");
+    padding: 0.4em 4.54em;
+}
+
+.card:nth-child(3) {
+    width: 20em;
+    background-image: url("fouad.jpeg");
+    padding: 0.4em 4.54em;
+}
+
+.card:nth-child(4) {
+    width: 20em;
+    background-image: url("safina.jpeg");
+    padding: 0.4em 4.54em;
+}
+
+.card:nth-child(1) h1 {
+    padding: 0.4em 4.54em;
+    background-color: black;
+}.card:nth-child(1) h2 {
+    padding: 0.4em 4.54em;
+    background-color: black;
+}
+.card:nth-child(1) h1 {
+    padding: 0.4em 4.54em;
+    object-position: top;
+    background-color: black;
+}
+
+.card:nth-child(2) h1 {
+    padding: 0.4em 4.54em;
+    background-color: black;
+}
+
+.card:nth-child(3) h1 {
+    padding: 0.4em 4.54em;
+    background-color: black;
+}
+
+.card:nth-child(4) h1 {
+    padding: 0.4em 4.54em;
+    background-color: black;
+}
+
+.card:nth-child(5) h1 {
+    padding: 0.4em 4.54em;
+    background-color: black;
+}
+
+.card:nth-child(6) h1 {
+    padding: 0.4em 4.54em;
+    background-color: black;
+}
+
+/* #Last {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    max-width: 61em;
+    height: 40em;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2.5em 2.5em 1.5em 1.5em;
+    box-shadow: 0px 2px 5px black;
+    transition: box-shadow 0.25s, transform 0.25s;
+    transform: scale(.8)
+} */
+
+.Last {
+    background-image: url("/images/IMG_6479.jpeg");
+    display: flex;
+    align-items: center;
+
+    justify-content: end;
+    flex-direction: column;
+    /* max-width: 61em; */
+    height: 40em;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2.5em 2.5em 1.5em 1.5em;
+    box-shadow: 0px 2px 5px black;
+    transition: box-shadow 0.25s, transform 0.25s;
+    transform: scale(.8)
+}
+
+.Last:hover {
+    cursor: pointer;
+    box-shadow: 1px 0 30px #bd7400;
+    transform: translateY(-0.25em);
+}
+
+.Last h1 {
+    position: absolute;
+    /* background-color: #bd7400; */
+    color: #f1f1f1;
+    font-weight: 500;
+    border-radius: 0 0 1em 1em;
+    /* padding: 50em; */
+}
+.Last h1{
+    background-color: black;
+    width:100%;
+    text-align:center;
+}
+
+
+/*
+.card:nth-child(3) h1 {
+    padding: 0.4em 4.62em;
+    background-color: black;
+} */
